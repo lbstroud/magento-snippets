@@ -77,6 +77,7 @@ if (empty($$newAttributes['${attribute_code}']) || !$$newAttributes['${attribute
         'frontend'       =&gt; null, // frondend_model
         'frontend_class' =&gt; null, // frontend_class
         'note'           =&gt; null, // note
+        //'option'         =&gt; array('values' =&gt; ()), // multiple option values 
         ));
 }
 </template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute_customer">$$newAttributes['${attribute_code}'] = $$eavConfig-&gt;getAttribute('${customer__customer_address}', '${attribute_code}');
@@ -96,6 +97,7 @@ if (empty($$newAttributes['${attribute_code}']) || !$$newAttributes['${attribute
         'frontend'        =&gt; null, // frondend_model
         'frontend_class'  =&gt; null, // frontend_class
         'note'            =&gt; null, // note
+        //'option'          =&gt; array('values' =&gt; ()), // multiple option values 
         'global'          =&gt; Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_GLOBAL, // is_global
         'input_renderer'  =&gt; null, // frontend_input_renderer
         'visible'         =&gt; 1, // is_visible
@@ -124,6 +126,7 @@ if (empty($$newAttributes['${attribute_code}']) || !$$newAttributes['${attribute
         'frontend'                   =&gt; null, // frondend_model
         'frontend_class'             =&gt; null, // frontend_class
         'note'                       =&gt; null, // note
+        //'option'                  =&gt; array('values' =&gt; ()), // multiple option values 
         'global'                     =&gt; Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_GLOBAL, // is_global
         'input_renderer'             =&gt; null, // frontend_input_renderer
         'visible'                    =&gt; 1, // is_visible
