@@ -60,9 +60,9 @@ $$installer-&gt;startSetup();
 
 //${setup}
 
-$$installer-&gt;endSetup();</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute">$$newAttributes['${attribute_code}'] = $$eavConfig-&gt;getAttribute('${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}', '${attribute_code}');
+$$installer-&gt;endSetup();</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute">$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}'] = $$eavConfig-&gt;getAttribute('${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}', '${attribute_code}');
 
-if (empty($$newAttributes['${attribute_code}']) || !$$newAttributes['${attribute_code}']-&gt;getId())
+if (empty($$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']) || !$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']-&gt;getId())
 {
     $$installer-&gt;addAttribute('${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}', '${attribute_code}', array(
         'type'           =&gt; '${int_static_varchar_datetime_text_decimal}', // backend_type
@@ -71,7 +71,7 @@ if (empty($$newAttributes['${attribute_code}']) || !$$newAttributes['${attribute
         'required'       =&gt; 1, // is_required
         'default'        =&gt; null, // is_default
         'user_defined'   =&gt; 0, // is_user_defined
-        'source'         =&gt; null, // source_model
+        'source'         =&gt; null, // source_model use 'eav/entity_attribute_source_table' for select types or 'eav/entity_attribute_source_boolean' for boolean values
         'backend'        =&gt; null, // backend_model
         'table'          =&gt; null, // backend_table
         'frontend'       =&gt; null, // frondend_model
@@ -80,9 +80,9 @@ if (empty($$newAttributes['${attribute_code}']) || !$$newAttributes['${attribute
         //'option'         =&gt; array('values' =&gt; ()), // multiple option values 
         ));
 }
-</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute_customer">$$newAttributes['${attribute_code}'] = $$eavConfig-&gt;getAttribute('${customer__customer_address}', '${attribute_code}');
+</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute_customer">$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}'] = $$eavConfig-&gt;getAttribute('${customer__customer_address}', '${attribute_code}');
 
-if (empty($$newAttributes['${attribute_code}']) || !$$newAttributes['${attribute_code}']-&gt;getId())
+if (empty($$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']) || !$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']-&gt;getId())
 {
     $$installer-&gt;addAttribute('${customer__customer_address}', '${attribute_code}', array(
         'type'            =&gt; '${int_static_varchar_datetime_text_decimal}', // backend_type
@@ -91,7 +91,7 @@ if (empty($$newAttributes['${attribute_code}']) || !$$newAttributes['${attribute
         'required'        =&gt; 1, 
         'default'         =&gt; null, 
         'user_defined'    =&gt; 0, 
-        'source'          =&gt; null,
+        'source'         =&gt; null, // source_model use 'eav/entity_attribute_source_table' for select types or 'eav/entity_attribute_source_boolean' for boolean values
         'backend'         =&gt; null, // backend_model
         'table'           =&gt; null, // backend_table
         'frontend'        =&gt; null, // frondend_model
@@ -109,9 +109,9 @@ if (empty($$newAttributes['${attribute_code}']) || !$$newAttributes['${attribute
         'position'        =&gt; 0, // position
         ));
 }
-</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute_product">$$newAttributes['${attribute_code}'] = $$eavConfig-&gt;getAttribute('catalog_product', '${attribute_code}');
+</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute_product">$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}'] = $$eavConfig-&gt;getAttribute('catalog_product', '${attribute_code}');
 
-if (empty($$newAttributes['${attribute_code}']) || !$$newAttributes['${attribute_code}']-&gt;getId())
+if (empty($$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']) || !$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']-&gt;getId())
 {
     $$installer-&gt;addAttribute('catalog_product', '${attribute_code}', array(
         'type'                       =&gt; '${int_static_varchar_datetime_text_decimal}', // backend_type
@@ -120,7 +120,7 @@ if (empty($$newAttributes['${attribute_code}']) || !$$newAttributes['${attribute
         'required'                   =&gt; 1, 
         'default'                    =&gt; null, 
         'user_defined'               =&gt; 0, 
-        'source'                     =&gt; null,
+        'source'         =&gt; null, // source_model use 'eav/entity_attribute_source_table' for select types or 'eav/entity_attribute_source_boolean' for boolean values
         'backend'                    =&gt; null, // backend_model
         'table'                      =&gt; null, // backend_table
         'frontend'                   =&gt; null, // frondend_model
