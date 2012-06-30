@@ -80,9 +80,9 @@ if (empty($$newAttributes['${customer__customer_address__catalog_category__catal
         //'option'         =&gt; array('values' =&gt; ()), // multiple option values 
         ));
 }
-</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute_customer">$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}'] = $$eavConfig-&gt;getAttribute('${customer__customer_address}', '${attribute_code}');
+</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute_customer">$$newAttributes['${customer__customer_address}']['${attribute_code}'] = $$eavConfig-&gt;getAttribute('${customer__customer_address}', '${attribute_code}');
 
-if (empty($$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']) || !$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']-&gt;getId())
+if (empty($$newAttributes['${customer__customer_address}']['${attribute_code}']) || !$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']-&gt;getId())
 {
     $$installer-&gt;addAttribute('${customer__customer_address}', '${attribute_code}', array(
         'type'            =&gt; '${int_static_varchar_datetime_text_decimal}', // backend_type
@@ -109,9 +109,9 @@ if (empty($$newAttributes['${customer__customer_address__catalog_category__catal
         'position'        =&gt; 0, // position
         ));
 }
-</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute_product">$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}'] = $$eavConfig-&gt;getAttribute('catalog_product', '${attribute_code}');
+</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute_product">$$newAttributes['catalog_product']['${attribute_code}'] = $$eavConfig-&gt;getAttribute('catalog_product', '${attribute_code}');
 
-if (empty($$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']) || !$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']-&gt;getId())
+if (empty($$newAttributes['catalog_product']['${attribute_code}']) || !$$newAttributes['${customer__customer_address__catalog_category__catalog_product__order__invoice__creditmemo__shipment__rma_item}']['${attribute_code}']-&gt;getId())
 {
     $$installer-&gt;addAttribute('catalog_product', '${attribute_code}', array(
         'type'                       =&gt; '${int_static_varchar_datetime_text_decimal}', // backend_type
