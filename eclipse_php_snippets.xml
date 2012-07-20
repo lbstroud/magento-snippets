@@ -11,6 +11,20 @@
 }
 </template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_model">class ${Vendor}_${Module}_Model_${Model} extends Mage_Catalog_Model_Abstract
 {
+    /**
+     * Model event prefix
+     *
+     * @var string
+     */
+    protected $$_eventPrefix = '${model}';
+
+    /**
+     * Name of the event object
+     *
+     * @var string
+     */
+    protected $$_eventObject = '${model}';
+
     protected function _construct()
     {
         $$this-&gt;_init('${modulealias}/${model}');

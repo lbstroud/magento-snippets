@@ -353,7 +353,7 @@
                             &lt;label&gt;${label}&lt;/label&gt;
                             &lt;frontend_type&gt;text&lt;/frontend_type&gt;
                             &lt;sort_order&gt;${sort}&lt;/sort_order&gt;
-                            &lt;backend_model&gt;${module}/config_backend_${model}&lt;/backend_model&gt;
+                            &lt;backend_model&gt;${module}/system_config_backend_${model}&lt;/backend_model&gt;
                             &lt;show_in_default&gt;1&lt;/show_in_default&gt;
                             &lt;show_in_website&gt;1&lt;/show_in_website&gt;
                             &lt;show_in_store&gt;1&lt;/show_in_store&gt;
