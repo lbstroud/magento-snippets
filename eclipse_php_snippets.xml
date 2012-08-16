@@ -4,7 +4,7 @@
     {
         $$this-&gt;_blockGroup = '${modulealias}';
         $$this-&gt;_controller = 'adminhtml_${block_alias}';
-        $$this-&gt;_headerText = Mage::helper('spadaroutdoor')-&gt;__('${Title}');
+        $$this-&gt;_headerText = Mage::helper('${modulealias}')-&gt;__('${Title}');
 
         parent::__construct();
     }
