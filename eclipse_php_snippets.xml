@@ -161,4 +161,79 @@ if (empty($$newAttributes['catalog_product']['${attribute_code}']) || !$$newAttr
         'group'                      =&gt; null, // Attribute group
         ));
 }
+</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute_product_select">$$newAttributes['catalog_product']['${attribute_code}'] = $$eavConfig-&gt;getAttribute('catalog_product', '${attribute_code}');
+
+if (empty($$newAttributes['catalog_product']['${attribute_code}']) || !$$newAttributes['catalog_product']['${attribute_code}']-&gt;getId())
+{
+    $$installer-&gt;addAttribute('catalog_product', '${attribute_code}', array(
+        'type'                       =&gt; 'int', // backend_type
+        'input'                      =&gt; 'select', // frontend_input
+        'label'                      =&gt; '${Label}', 
+        'required'                   =&gt; 1, 
+        'default'                    =&gt; null, 
+        'user_defined'               =&gt; 0, 
+        'source'                     =&gt; 'eav/entity_attribute_source_table', // source_model
+        'backend'                    =&gt; null, // backend_model
+        'table'                      =&gt; null, // backend_table
+        'frontend'                   =&gt; null, // frondend_model
+        'frontend_class'             =&gt; null, // frontend_class
+        'note'                       =&gt; null, // note
+        'option'                     =&gt; array('values' =&gt; array(${values})), // multiple option values 
+        'global'                     =&gt; Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_GLOBAL, // is_global
+        'input_renderer'             =&gt; null, // frontend_input_renderer
+        'visible'                    =&gt; 1, // is_visible
+        'searchable'                 =&gt; 0, // is_searchable
+        'filterable'                 =&gt; 0, // is_filterable
+        'comparable'                 =&gt; 0, // is_comparable
+        'visible_on_front'           =&gt; 0, // is_visible_on_front
+        'wysiwyg_enabled'            =&gt; 0, // is_wysiwyg_enabled
+        'is_html_allowed_on_front'   =&gt; 0, // is_html_allowed_on_front
+        'visible_in_advanced_search' =&gt; 0, // is_visible_in_advanced_search
+        'filterable_in_search'       =&gt; 0, // is_filterable_in_search
+        'used_in_product_listing'    =&gt; 0, // used_in_product_listing
+        'used_for_sort_by'           =&gt; 0, // used_for_sort_by
+        'apply_to'                   =&gt; '${all_simple_configurable_virtual_grouped_bundle}', // use comma to separate multiple values
+        'position'                   =&gt; 0, // position
+        'is_configurable'            =&gt; 1, // is_configurable
+        'used_for_promo_rules'       =&gt; 0, // is_used_for_promo_rules
+        'group'                      =&gt; null, // Attribute group
+        ));
+}
+</template><template autoinsert="true" context="php" deleted="false" description="" enabled="true" name="mage_setup_eav_addAttribute_product_yesno">$$newAttributes['catalog_product']['${attribute_code}'] = $$eavConfig-&gt;getAttribute('catalog_product', '${attribute_code}');
+
+if (empty($$newAttributes['catalog_product']['${attribute_code}']) || !$$newAttributes['catalog_product']['${attribute_code}']-&gt;getId())
+{
+    $$installer-&gt;addAttribute('catalog_product', '${attribute_code}', array(
+        'type'                       =&gt; 'int', // backend_type
+        'input'                      =&gt; 'select', // frontend_input
+        'label'                      =&gt; '${Label}', 
+        'required'                   =&gt; 0, 
+        'default'                    =&gt; null, 
+        'user_defined'               =&gt; 0, 
+        'source'                     =&gt; 'eav/entity_attribute_source_boolean', // source_model
+        'backend'                    =&gt; null, // backend_model
+        'table'                      =&gt; null, // backend_table
+        'frontend'                   =&gt; null, // frondend_model
+        'frontend_class'             =&gt; null, // frontend_class
+        'note'                       =&gt; null, // note
+        'global'                     =&gt; Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_GLOBAL, // is_global
+        'input_renderer'             =&gt; null, // frontend_input_renderer
+        'visible'                    =&gt; 1, // is_visible
+        'searchable'                 =&gt; 0, // is_searchable
+        'filterable'                 =&gt; 0, // is_filterable
+        'comparable'                 =&gt; 0, // is_comparable
+        'visible_on_front'           =&gt; 0, // is_visible_on_front
+        'wysiwyg_enabled'            =&gt; 0, // is_wysiwyg_enabled
+        'is_html_allowed_on_front'   =&gt; 0, // is_html_allowed_on_front
+        'visible_in_advanced_search' =&gt; 0, // is_visible_in_advanced_search
+        'filterable_in_search'       =&gt; 0, // is_filterable_in_search
+        'used_in_product_listing'    =&gt; 0, // used_in_product_listing
+        'used_for_sort_by'           =&gt; 0, // used_for_sort_by
+        'apply_to'                   =&gt; '${all_simple_configurable_virtual_grouped_bundle}', // use comma to separate multiple values
+        'position'                   =&gt; 0, // position
+        'is_configurable'            =&gt; 1, // is_configurable
+        'used_for_promo_rules'       =&gt; 0, // is_used_for_promo_rules
+        'group'                      =&gt; null, // Attribute group
+        ));
+}
 </template></templates>
