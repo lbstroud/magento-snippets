@@ -42,7 +42,7 @@ It contains XML templates for Configuration and layouts blocks in Magento.
 4. NETBEANS INSTALLATION AND VERSION UPDATE
 
     1) open Tools > Options > Editor > Code Templates
-    2) Click "Import" button in the bottom of the window
+    2) Click "Import" button at the bottom of the window
     3) Browse package file netbeans-magento-snippets.zip, click "Ok"
     4) Check "All" checkbox, click "Ok"
     5) Confirm IDE restart with "Yes"
