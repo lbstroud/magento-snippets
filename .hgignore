@@ -5,3 +5,5 @@ syntax: regexp
 ^\.buildpath$
 syntax: regexp
 ^\.settings$
+syntax: glob
+var/**
