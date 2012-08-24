@@ -7,27 +7,35 @@ function eclipse2netbeans($eclipsePath, $netbeansPath)
 
     foreach ($eclipseXml->template as $eclipseTemplateXml)
     {
-        $netbeansTemplateXml = $netbeans->addChild('codetemplate');
+        $netbeansTemplateXml = $netbeansXml->addChild('codetemplate');
     
-        $netbeansTemplate->addAttribute('abbreviation', (string)$eclipseTemplate['name']);
-        $netbeansTemplate->addAttribute('xml:space', 'preserve');
-        $code = $netbeansTemplate->addChild('code');
+        $netbeansTemplateXml->addAttribute('abbreviation', (string)$eclipseTemplateXml['name']);
+        $netbeansTemplateXml->addAttribute('xml:space', 'preserve');
+        $codeXml = $netbeansTemplateXml->addChild('code');
+
+        $codeDom = dom_import_simplexml($codeXml);
+        $docDom  = $codeDom->ownerDocument;
+        $codeDom->appendChild($docDom->createCDATASection((string)$eclipseTemplateXml));
     
-        $node = dom_import_simplexml($code);
-        $doc  = $node->ownerDocument;
-        $node->appendChild($doc->createCDATASection((string)$eclipseTemplate));
-    
-        $description = (string)$eclipseTemplate['description'];
+        $description = (string)$eclipseTemplateXml['description'];
     
         if ($description)
         {
-            $descriptionXml = $netbeansTemplate->addChild('description');
-            $node = dom_import_simplexml($descriptionXml);
-            $node->appendChild($doc->createCDATASection($description));
+            $descriptionXml = $netbeansTemplateXml->addChild('description');
+            $descriptionDom = dom_import_simplexml($descriptionXml);
+            $descriptionDom->appendChild($docDom->createCDATASection($description));
         }
     }
 
-    $netbeans->asXML($netbeansPath);
+    if (!file_exists($netbeansPath))
+    {
+        if (!is_dir(dirname($netbeansPath)))
+        {
+            mkdir(dirname($netbeansPath), 0644, true);
+        }
+    }
+
+    $netbeansXml->asXML($netbeansPath);
 }
 
 eclipse2netbeans(dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'eclipse_xml_snippets.xml', dirname(__FILE__).'/package/config/Editors/text/xml/CodeTemplates/org-netbeans-modules-editor-settings-CustomCodeTemplates.xml');
