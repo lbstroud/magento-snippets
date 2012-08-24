@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
+<codetemplates>
+    <codetemplate abbreviation="mage_config" xml:space="preserve">
+        <code><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <${class}>
+            <version>0.1.0</version>
+        </${class}>
+    </modules>
+
+    <global>
+        <models>
+            <${alias}>
+                <class>${class}_Model</class>
+                <resourceModel>${alias}_mysql4</resourceModel>
+            </${alias}>
+            
+            <${alias}_mysql4>
+                <class>${class}_Model_Mysql4</class>
+                <entities>
+                    
+                </entities>
+            </${alias}_mysql4>
+        </models>
+        <blocks>
+            <${alias}>
+                <class>${class}_Block</class>
+            </${alias}>
+        </blocks>
+
+        <helpers>
+            <${alias}><class>${class}_Helper</class></${alias}>
+        </helpers>
+
+		<resources>
+			<${alias}_setup>
+				<setup>
+ 				   <module>${class}</module>
+				</setup>
+				<connection>
+				    <use>core_setup</use>
+				</connection>
+			</${alias}_setup>
+			<${alias}_write>
+				<connection>
+				    <use>core_write</use>
+				</connection>
+			</${alias}_write>
+			<${alias}_read>
+				<connection>
+				    <use>core_read</use>
+				</connection>
+			</${alias}_read>
+		</resources>
+        <fieldsets>
+             
+        </fieldsets>
+    </global>
+
+    <admin>
+    </admin>
+
+    <adminhtml>
+        <menu>
+            
+        </menu>
+    </adminhtml>
+
+    <frontend>
+    </frontend>
+</config>
+]]></code>
+    </codetemplate>
+</codetemplates>
