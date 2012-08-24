@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
+<codetemplates>
+    <codetemplate abbreviation="mage_model" xml:space="preserve">
+        <code><![CDATA[class ${Vendor}_${Module}_Model_${Model} extends Mage_Catalog_Model_Abstract
+{
+    /**
+     * Model event prefix
+     *
+     * @var string
+     */
+    protected $$_eventPrefix = '${model}';
+
+    /**
+     * Name of the event object
+     *
+     * @var string
+     */
+    protected $$_eventObject = '${model}';
+
+    protected function _construct()
+    {
+        $$this->_init('${modulealias}/${model}');
+    }
+}
+]]></code>
+    </codetemplate>
+</codetemplates>

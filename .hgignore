@@ -1,0 +1,7 @@
+
+syntax: regexp
+^\.project$
+syntax: regexp
+^\.buildpath$
+syntax: regexp
+^\.settings$
