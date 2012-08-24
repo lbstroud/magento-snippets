@@ -1,31 +1,58 @@
 Magento Snippets
-Magento IDE Code Snippets for Eclipse PDT / Zend Studio
+Magento IDE Code Snippets for Eclipse PDT / Zend Studio / NetBeans
 http://magento-snippets.googlecode.com/
 Brought by Yury Ksenevich http://www.spadar.com/
 
+
+
+TABLE OF CONTENTS:
+
+1.   Prodject Description
+2.   Requirements
+3.   Eclipse Installation
+4.   Eclipse Version Update
+5.   Developer Guide
+5.1      XML Configs
+5.2      PHP Configs
+
+
+
+1.   PROJECT DESCRIPTION
 
 This project is intended to help Magento developers by adding hints to their IDE (Eclipse PDT / Zend Studio) for most reusable pieces of code.
 
 It contains XML templates for Configuration and layouts blocks in Magento.
 
-INSTALLATION
+2. REQUIREMENTS
+
+    Eclipse based PHP IDE (PDT or Zend Studio)
+    NetBeans IDE 
+
+3.   ECLIPSE INSTALLATION
 
     1) open Window > Preferences > XML > XML Files > Editor > Templates
     2) click "Import" and choose eclipse_xml_templates.xml
     3) use by typing mage_ in your XML files
     4) to install PHP snippets do the same operations in Window > Preferences > PHP > Editor > Templates, use file eclipse_php_templates.xml 
 
-VERSION UPDATE
+3.   ECLIPSE VERSION UPDATE
 
     In order to update XML or PHP snippets you need to remove all old snippets prefixed with "mage". If you don't remove old snippets, IDE will suggest the same snippet multiple times. 
 
-REQUIREMENTS
+4. NETBEANS INSTALLATION AND VERSION UPDATE
 
-    Eclipse based PHP IDE (PDT or Zend Studio) 
+    1) open Tools > Options > Editor > Code Templates
+    2) Click "Import" button in the bottom of the window
+    3) Browse package file netbeans-magento-snippets.zip, click "Ok"
+    4) Check "All" checkbox, click "Ok"
+    5) Confirm IDE restart with "Yes"
+    6) To update Magento Snippets repeat the same process with new package
+    
+    
 
-DEVELOPER GUIDE
+5.   DEVELOPER GUIDE
 
-XML CONFIGS
+5.1      XML CONFIGS
 
     mage_module - create module definition in app/etc/modules/<Vendor>_<Module>.xml
     mage_config - create module configs in app/code/local/<Vendor>/<Module>/etc/config.xml
@@ -60,6 +87,7 @@ XML CONFIGS
 
     mage_config_frontent_translate - define translation CSV for backend. Use in config/frontend XML-path
     mage_config_default_email - Required default values for email template configs. Use in config/default/<system_section>/<system_group> XML-path 
+    mage_config_global_fieldsets_address - define custom customer address attribute to be copied from quote to order and from address book to quote 
 
     mage_system - create system configs file structure in app/code/local/<Vendor>/<Module>/etc/system.xml
         section - new section with configuration params (sidebar menu item on System -> Configuration page) Also can use already defined or core section, in this case you need to delete all children except groups tag.
@@ -102,7 +130,7 @@ XML CONFIGS
     mage_layout_update - use all values that are defined in another layout handle
         action - another layout handle name 
 
-PHP configs
+5.2      PHP configs
 
     mage_model - model class with database table initialization
     mage_model_mysql4 - resource model class with database table initialization
@@ -127,6 +155,14 @@ PHP configs
         attribute_code - new attribute code
         int_static_varchar_datetime_text_decimal - backend EAV type (value type)
         select_text_date_hidden - input type that is used to display attribute
+        Label - attribute label
+        all_simple_configurable_virtual_grouped_bundle - apply to types of products. Use comma to separate values 
+    mage_setup_eav_addAttribute_product_yesno - define a new product attribute with yes/no type in EAV structure
+        attribute_code - new attribute code
+        Label - attribute label
+        all_simple_configurable_virtual_grouped_bundle - apply to types of products. Use comma to separate values 
+    mage_setup_eav_addAttribute_product_select - define a new dropdown product attribute in EAV structure
+        attribute_code - new attribute code
         Label - attribute label
         all_simple_configurable_virtual_grouped_bundle - apply to types of products. Use comma to separate values 
 

@@ -16,9 +16,9 @@ function eclipse2netbeans($eclipsePath, $netbeansPath)
         $codeDom = dom_import_simplexml($codeXml);
         $docDom  = $codeDom->ownerDocument;
         $codeDom->appendChild($docDom->createCDATASection((string)$eclipseTemplateXml));
-    
+
         $description = (string)$eclipseTemplateXml['description'];
-    
+
         if ($description)
         {
             $descriptionXml = $netbeansTemplateXml->addChild('description');
@@ -38,5 +38,5 @@ function eclipse2netbeans($eclipsePath, $netbeansPath)
     $netbeansXml->asXML($netbeansPath);
 }
 
-eclipse2netbeans(dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'eclipse_xml_snippets.xml', dirname(__FILE__).'/package/config/Editors/text/xml/CodeTemplates/org-netbeans-modules-editor-settings-CustomCodeTemplates.xml');
-eclipse2netbeans(dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'eclipse_php_snippets.xml', dirname(__FILE__).'/package/config/Editors/text/x-php5/CodeTemplates/org-netbeans-modules-editor-settings-CustomCodeTemplates.xml');
+eclipse2netbeans(dirname(dirname(__FILE__)).'/eclipse_xml_snippets.xml', dirname(__FILE__).'/package/config/Editors/text/xml/CodeTemplates/org-netbeans-modules-editor-settings-CustomCodeTemplates.xml');
+eclipse2netbeans(dirname(dirname(__FILE__)).'/eclipse_php_snippets.xml', dirname(__FILE__).'/package/config/Editors/text/x-php5/CodeTemplates/org-netbeans-modules-editor-settings-CustomCodeTemplates.xml');
