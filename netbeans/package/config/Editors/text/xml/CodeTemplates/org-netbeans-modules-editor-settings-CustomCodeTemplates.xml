@@ -196,7 +196,7 @@
 	            </observers>
 		    </${event}>
 		</events>
-]]></code><description><![CDATA[Magento Config.xml Global Events Observers definition]]></description></codetemplate><codetemplate abbreviation="mage_config_global_fieldsets_address" space="preserve"><code><![CDATA[            <sales_convert_quote_address>
+]]></code><description><![CDATA[Magento Config.xml Global Events Observers definition]]></description></codetemplate><codetemplate abbreviation="mage_config_global_fieldsets_address" space="preserve"><code><![CDATA[<sales_convert_quote_address>
                 <${attribute}>
                     <to_customer_address>*</to_customer_address>
                     <to_order_address>*</to_order_address>
@@ -223,7 +223,13 @@
 		            <layout_handle>${handle}</layout_handle>
 		        </${handle}>
             </layouts>
-        </page>]]></code><description><![CDATA[Global page layouts for handles]]></description></codetemplate><codetemplate abbreviation="mage_config_global_resources_setup_eav" space="preserve"><code><![CDATA[<class>Mage_Eav_Model_Entity_Setup</class>]]></code><description><![CDATA[Add EAV class as installer context to setup script]]></description></codetemplate><codetemplate abbreviation="mage_config_global_template_email" space="preserve"><code><![CDATA[<template>
+        </page>]]></code><description><![CDATA[Global page layouts for handles]]></description></codetemplate><codetemplate abbreviation="mage_config_global_resources_setup_eav" space="preserve"><code><![CDATA[<class>Mage_Eav_Model_Entity_Setup</class>]]></code><description><![CDATA[Add EAV class as installer context to setup script]]></description></codetemplate><codetemplate abbreviation="mage_config_global_rewrite" space="preserve"><code><![CDATA[<rewrite>
+		    <${rewrite_name}>
+	            <from><![CDATA[#${from}#]]]]><![CDATA[></from>
+	            <to><![CDATA[${to}]]]]><![CDATA[></to>
+		    </${rewrite_name}>
+		</rewrite>
+]]></code><description><![CDATA[Add URL rewrite statement]]></description></codetemplate><codetemplate abbreviation="mage_config_global_template_email" space="preserve"><code><![CDATA[<template>
             <email>
                <${template} translate="label" module="${module}">
                    <label>${label}</label>
