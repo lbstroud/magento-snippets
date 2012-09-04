@@ -194,7 +194,7 @@
 	            &lt;/observers&gt;
 		    &lt;/${event}&gt;
 		&lt;/events&gt;
-</template><template autoinsert="true" context="xml_all" deleted="false" description="" enabled="true" name="mage_config_global_fieldsets_address">            &lt;sales_convert_quote_address&gt;
+</template><template autoinsert="true" context="xml_all" deleted="false" description="" enabled="true" name="mage_config_global_fieldsets_address">&lt;sales_convert_quote_address&gt;
                 &lt;${attribute}&gt;
                     &lt;to_customer_address&gt;*&lt;/to_customer_address&gt;
                     &lt;to_order_address&gt;*&lt;/to_order_address&gt;
@@ -221,7 +221,13 @@
 		            &lt;layout_handle&gt;${handle}&lt;/layout_handle&gt;
 		        &lt;/${handle}&gt;
             &lt;/layouts&gt;
-        &lt;/page&gt;</template><template autoinsert="true" context="xml_tag" deleted="false" description="Add EAV class as installer context to setup script" enabled="true" name="mage_config_global_resources_setup_eav">&lt;class&gt;Mage_Eav_Model_Entity_Setup&lt;/class&gt;</template><template autoinsert="true" context="xml_tag" deleted="false" description="Magento Config.xml Global Email Template definition" enabled="true" name="mage_config_global_template_email">&lt;template&gt;
+        &lt;/page&gt;</template><template autoinsert="true" context="xml_tag" deleted="false" description="Add EAV class as installer context to setup script" enabled="true" name="mage_config_global_resources_setup_eav">&lt;class&gt;Mage_Eav_Model_Entity_Setup&lt;/class&gt;</template><template autoinsert="true" context="xml_tag" deleted="false" description="Add URL rewrite statement" enabled="true" name="mage_config_global_rewrite">&lt;rewrite&gt;
+		    &lt;${rewrite_name}&gt;
+	            &lt;from&gt;&lt;![CDATA[#${from}#]]&gt;&lt;/from&gt;
+	            &lt;to&gt;&lt;![CDATA[${to}]]&gt;&lt;/to&gt;
+		    &lt;/${rewrite_name}&gt;
+		&lt;/rewrite&gt;
+</template><template autoinsert="true" context="xml_tag" deleted="false" description="Magento Config.xml Global Email Template definition" enabled="true" name="mage_config_global_template_email">&lt;template&gt;
             &lt;email&gt;
                &lt;${template} translate="label" module="${module}"&gt;
                    &lt;label&gt;${label}&lt;/label&gt;
