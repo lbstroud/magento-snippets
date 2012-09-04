@@ -68,6 +68,14 @@
 
     <frontend>
     </frontend>
+    
+    <phpunit>
+        <suite>
+            <modules>
+            	<${class} />
+            </modules>
+        </suite>
+    </phpunit>
 </config>
 ]]></code><description><![CDATA[Magento Module Config File]]></description></codetemplate><codetemplate abbreviation="mage_config_admin_routers" space="preserve"><code><![CDATA[<routers>
           <${module}admin>
