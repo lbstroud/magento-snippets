@@ -66,6 +66,14 @@
 
     &lt;frontend&gt;
     &lt;/frontend&gt;
+    
+    &lt;phpunit&gt;
+        &lt;suite&gt;
+            &lt;modules&gt;
+            	&lt;${class} /&gt;
+            &lt;/modules&gt;
+        &lt;/suite&gt;
+    &lt;/phpunit&gt;
 &lt;/config&gt;
 </template><template autoinsert="true" context="xml_tag" deleted="false" description="" enabled="true" name="mage_config_admin_routers">&lt;routers&gt;
           &lt;${module}admin&gt;
