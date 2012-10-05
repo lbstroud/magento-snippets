@@ -183,7 +183,9 @@
                     &lt;module&gt;${class_preffix}&lt;/module&gt;
                     &lt;frontName&gt;${router}&lt;/frontName&gt;
                 &lt;/args&gt;
-            &lt;/${router}&gt;</template><template autoinsert="true" context="xml_tag" deleted="false" description="Translation file config for frontent module translations" enabled="true" name="mage_config_frontent_translate">&lt;translate&gt;
+            &lt;/${router}&gt;</template><template autoinsert="true" context="xml_all" deleted="false" description="define URL paths that must be opened as secure" enabled="true" name="mage_config_frontend_secure_url">&lt;secure_url&gt;
+            &lt;${alias}&gt;/${route}/&lt;/${alias}&gt;
+        &lt;/secure_url&gt;</template><template autoinsert="true" context="xml_tag" deleted="false" description="Translation file config for frontent module translations" enabled="true" name="mage_config_frontent_translate">&lt;translate&gt;
             &lt;modules&gt;
                 &lt;${Module_Name}&gt;
                     &lt;files&gt;
