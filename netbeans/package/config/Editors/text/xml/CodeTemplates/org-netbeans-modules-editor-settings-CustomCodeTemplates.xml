@@ -185,7 +185,9 @@
                     <module>${class_preffix}</module>
                     <frontName>${router}</frontName>
                 </args>
-            </${router}>]]></code></codetemplate><codetemplate abbreviation="mage_config_frontent_translate" space="preserve"><code><![CDATA[<translate>
+            </${router}>]]></code></codetemplate><codetemplate abbreviation="mage_config_frontend_secure_url" space="preserve"><code><![CDATA[<secure_url>
+            <${alias}>/${route}/</${alias}>
+        </secure_url>]]></code><description><![CDATA[define URL paths that must be opened as secure]]></description></codetemplate><codetemplate abbreviation="mage_config_frontent_translate" space="preserve"><code><![CDATA[<translate>
             <modules>
                 <${Module_Name}>
                     <files>
