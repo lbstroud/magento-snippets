@@ -424,4 +424,67 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </${email}_template>]]></code><description><![CDATA[Email configs template]]></description></codetemplate></codetemplates>
+                        </${email}_template>]]></code><description><![CDATA[Email configs template]]></description></codetemplate><codetemplate abbreviation="mage_widget" space="preserve"><code><![CDATA[<?xml version="1.0"?>
+<widgets>
+    <${widget_alias} type="${modulealias}/${widget_block}" translate="name description" module="${modulealias}">
+        <name>${Name}</name>
+        <description>${Description}</description>
+        <is_email_compatible>1</is_email_compatible>
+        <parameters>
+            ${mage_widget_parameter}
+        </parameters>
+    </${widget_alias}>
+</widgets>]]></code></codetemplate><codetemplate abbreviation="mage_widget_new" space="preserve"><code><![CDATA[<${widget_alias} type="${modulealias}/${widget_block}" translate="name description" module="${modulealias}">
+        <name>${Name}</name>
+        <description>${Description}</description>
+        <is_email_compatible>1</is_email_compatible>
+        <parameters>
+            ${mage_widget_parameter}
+        </parameters>
+    </${widget_alias}>
+]]></code></codetemplate><codetemplate abbreviation="mage_widget_parameter" space="preserve"><code><![CDATA[<${parameter} translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>${Label}</label>
+                <description></description>
+                <type>${type}</type><!-- create new block or choose from: checkbox,checkboxes,date,editor,file,hidden,image,imagefile,label,multiline,multiselect,note,password,radio,radios,text,textarea,time -->
+                <value>${default_value}</value>
+                <sort_order>1</sort_order>
+            </${parameter}>
+]]></code></codetemplate><codetemplate abbreviation="mage_widget_parameter_depends" space="preserve"><code><![CDATA[<depends>
+                    <${parameter}>
+                        <value>${depends_value}</value>
+                    </${parameter}>
+                </depends>]]></code></codetemplate><codetemplate abbreviation="mage_widget_parameter_helper_block" space="preserve"><code><![CDATA[<helper_block>
+                    <type>${modulealias}/${helper_block}</type>
+                    <data>
+                        <button translate="${button}">
+                            <${button}>${Label}</${button}>
+                        </button>
+                    </data>
+                </helper_block>]]></code></codetemplate><codetemplate abbreviation="mage_widget_parameter_select" space="preserve"><code><![CDATA[<${parameter} translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>${Label}</label>
+                <description></description>
+                <type>select</type>
+                <value>${default_value}</value>
+                <values>
+                    <default translate="label">
+                        <value>${default_value}</value>
+                        <label>${DefaultLabel}</label>
+                    </default>
+                </values>
+                <sort_order>1</sort_order>
+            </${parameter}>
+]]></code></codetemplate><codetemplate abbreviation="mage_widget_parameter_select_source" space="preserve"><code><![CDATA[<${parameter} translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>${Label}</label>
+                <description></description>
+                <type>select</type>
+                <value>${default_value}</value>
+                <source_model>adminhtml/system_config_source_${source}</source_model>
+                <sort_order>1</sort_order>
+            </${parameter}>
+]]></code></codetemplate></codetemplates>
